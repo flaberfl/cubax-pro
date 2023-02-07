@@ -1,0 +1,49 @@
+.page {
+
+  /* .page__main */
+  &__main {}
+}
+
+.main {
+  @include adaptiveValue("padding-top", 151, 118);
+  @include adaptiveValue("padding-bottom", 74, 83);
+  min-height: 100vh;
+
+  /* .main__container */
+  &__container {
+    display: grid;
+    justify-content: center;
+  }
+
+  /* .main__title */
+  &__title {
+    max-width: rem(900);
+
+    text-align: center;
+  }
+
+  /* .main__image */
+  &__image {}
+
+  /* .main__button */
+  &__button {}
+
+  /* .main__list */
+  &__list {}
+
+  /* .main__item */
+  &__item {}
+}
+
+.title {}
+
+.button {}
+
+.item-main {
+
+  /* .item-main__image */
+  &__image {}
+
+  /* .item-main__text */
+  &__text {}
+}
