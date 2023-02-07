@@ -5,29 +5,53 @@
 }
 
 .main {
-  @include adaptiveValue("padding-top", 151, 118);
-  @include adaptiveValue("padding-bottom", 74, 83);
-  min-height: 100vh;
+
+  background: url(@img/background.png) center / cover no-repeat;
 
   /* .main__container */
   &__container {
-    // display: grid;
-    // justify-items: center;
-    display: flex;
-    flex-direction: column;
+    @include adaptiveValue("padding-top", 151, 118);
+    @include adaptiveValue("padding-bottom", 74, 83);
+    display: grid;
     align-items: center;
-    justify-content: space-between;
+    justify-items: center;
+    // min-height: calc(100vh - $widthHeader);
+    min-height: 100vh;
   }
 
   /* .main__title */
   &__title {
     max-width: rem(1025);
-
+    // justify-self: center;
     text-align: center;
   }
 
+  /* .main__decore */
+  &__decore {
+    position: relative;
+  }
+
   /* .main__image */
-  &__image {}
+  &__image {
+    // position: absolute;
+    position: relative;
+
+
+    &_center {
+      &::before {
+        position: absolute;
+        content: '';
+        // width: 100%;
+        height: 100%;
+        width: 100%;
+
+        align-items: stretch;
+        background: url(@img/center-cloud.png) center / cover no-repeat;
+      }
+
+      // top: 0;
+    }
+  }
 
   /* .main__button */
   &__button {
@@ -35,7 +59,13 @@
   }
 
   /* .main__list */
-  &__list {}
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    // grid-template-columns: repeat(auto-fit, minmax(rem(263), 1fr));
+    gap: rem(20);
+    margin: 0 rem(-80);
+  }
 
   /* .main__item */
   &__item {}
@@ -46,10 +76,24 @@
 .button {}
 
 .item-main {
+  display: flex;
+  flex-direction: column;
+  gap: rem(16);
+  @include adaptiveValue("padding-top", 41, 27);
+  @include adaptiveValue("padding-right", 28, 35);
+  @include adaptiveValue("padding-bottom", 32, 40);
+  @include adaptiveValue("padding-left", 44, 20);
+
+  background: #fff;
+  border-radius: rem(30);
 
   /* .item-main__image */
   &__image {}
 
   /* .item-main__text */
-  &__text {}
+  &__text {
+    font-size: rem(14);
+    font-weight: 450;
+    line-height: 157%;
+  }
 }

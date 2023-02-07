@@ -4,10 +4,19 @@
 .button {
 	display: inline-flex;
 	padding: 0px 0px;
+	width: rem(220);
+	height: rem(70);
+	justify-content: center;
+	align-items: center;
+	border-radius: rem(35);
+	color: #fff;
 
+	background-color: $btnColor;
+	
 	@media (any-hover: hover) {
 		&:hover {
-			
+			background-color: $btnColor;
+
 		}
 	}
 }
