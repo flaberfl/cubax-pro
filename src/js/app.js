@@ -160,7 +160,7 @@
   // Модуль паралакса
   // Документація: https://template.fls.guru/template-docs/paralaks-pri-skroli.html
   // Сниппет(HTML):
-  // import "./libs/parallax.js";
+  import "./libs/parallax.js";
 
   // Функции работы скроллом
   import * as flsScroll from "./files/scroll/scroll.js";

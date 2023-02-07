@@ -12,6 +12,20 @@
   }
 }
 
+@keyframes floatingX {
+
+  0%,
+  100% {
+    -webkit-transform: translateX(0rem);
+    transform: translateX(0rem);
+  }
+
+  50% {
+    -webkit-transform: translateX(-4rem);
+    transform: translateX(-4rem);
+  }
+}
+
 .wave {
   animation-name: wave-animation;
 
