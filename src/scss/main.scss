@@ -8,8 +8,6 @@
     @include adaptiveValue("padding-bottom", 20, 83);
     @include adaptiveValue("padding-top", 151, 118);
 
-
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,9 +33,7 @@
   }
 
   /* .main__decore */
-  &__decore {
-    overflow: hidden;
-  }
+  &__decore {}
 
   /* .main__image */
   &__image {
@@ -76,6 +72,7 @@
       position: absolute;
       left: 27.7%;
       top: 29.6%;
+      overflow: hidden;
 
       animation: floating 6s infinite linear;
 
@@ -92,6 +89,7 @@
       position: absolute;
       right: 2.8%;
       top: 39.2%;
+      overflow: hidden;
 
       animation: floating 4s infinite linear;
 
