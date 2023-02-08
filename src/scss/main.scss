@@ -42,37 +42,46 @@
   &__image {
     position: relative;
 
-    &_left,&_right {
-      @media (max-width: em(1366)){
-         display: none; 
+    &_left,
+    &_right {
+      @media (max-width:$tablet) {
+        opacity: 0.4;
+
       }
+
     }
 
-    img {
-      max-width: 100%;
-    }
 
     &_left {
       position: absolute;
       left: 13.5%;
       top: 35.1%;
       // padding-bottom: percent(449, 404);
-      
+
       animation: floating 4s infinite linear;
-      @media (min-width: em(1366)){
+
+      @media (min-width: em(1366)) {
         z-index: 50;
       }
-      
+
+      img {
+        max-width: 100%;
+      }
+
+
     }
 
     &_center {
       position: absolute;
       left: 18.2%;
       top: 29.6%;
-
+      @include adaptiveValue("left", 100, -100);
       z-index: 5;
-
       animation: floating 6s infinite linear;
+
+      img {
+        max-width: 100%;
+      }
     }
 
     &_right {
@@ -81,6 +90,11 @@
       top: 39.2%;
 
       animation: floating 4s infinite linear;
+
+      img {
+        max-width: 100%;
+      }
+
     }
 
   }

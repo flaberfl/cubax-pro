@@ -1,7 +1,8 @@
 // Заголовки, общие БЄМ блоки и проче...
 
 .title {
-  font-size: rem(42);
+  @include adaptiveValue("font-size", 42, 26);
+  // font-size: rem(42);
   font-weight: 300;
   line-height: 143%;
   text-transform: uppercase;

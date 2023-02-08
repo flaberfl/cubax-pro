@@ -3,6 +3,8 @@
 .header {
   // padding-bottom: rem(46);
   // padding-top: rem(46);
+  @include adaptiveValue("padding-bottom", 46, 19);
+  @include adaptiveValue("padding-top", 46, 19);
 
   position: fixed;
   width: 100%;
@@ -38,14 +40,20 @@
 
   /* .header__container */
   &__container {
-    height: rem(138);
     display: flex;
     align-items: center;
+    gap: rem(20);
   }
 
   &__logo {
     position: relative;
     z-index: 5;
+
+    img {
+      @include adaptiveValue("width", 185, 156);
+      @include adaptiveValue("hight", 46, 39);
+
+    }
   }
 
   &__menu {
@@ -57,9 +65,17 @@
     z-index: 5;
     display: flex;
     align-items: center;
+
+    flex: 0 0 auto;
+
     gap: rem(12);
     letter-spacing: .04em;
 
+    @media (max-width:$mobile) {
+      display: none;
+    }
+
+    // @include adaptiveValue("gap", 12, 6, 1920, 992, 2);
   }
 
   .menu {
@@ -93,9 +109,9 @@
           width: 100%;
           top: 0;
           left: -100%;
-          @include adaptiveValue("height", 100, 56, 768, 320, 2); // адаптируем плашку
+          @include adaptiveValue("height", 98, 77, 768, 360, 2); // адаптируем плашку
 
-          background-color: silver; // цвет плашки
+          background-color: #fff; // цвет плашки
           transition: all 0.3s ease 0s;
         }
 
@@ -114,8 +130,7 @@
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      // row-gap: rem(10);
-      @include adaptiveValue("column-gap", 60, 15);
+      @include adaptiveValue("column-gap", 60, 15, 1920, 992, 1);
 
       letter-spacing: .04em;
 
@@ -173,50 +188,57 @@
   @media (max-width: $mobile) {
     display: block;
     position: relative;
-    width: rem(27);
-    height: rem(24);
+    width: rem(33);
+    height: rem(30);
     cursor: pointer;
     z-index: 999;
 
     span,
-    &::before,
-    &::after {
+    &::before {
       content: "";
       transition: all 0.3s ease 0s;
       left: 0px;
       position: absolute;
       width: 100%;
-      height: rem(4);
-      border-radius: rem(8);
-      background-color: #000;
+      height: rem(5);
+      border-radius: rem(5);
+      background-color: $burgerColor;
     }
 
     &::before {
-      top: rem(2);
-    }
-
-    &::after {
-      bottom: 0px;
+      top: rem(6);
     }
 
     span {
-      top: calc(50% - 1px);
+      top: 70%;
     }
 
     .menu-open & {
-      span {
-        transform: scale(0);
-      }
-
       &::before {
         transform: rotate(-45deg);
-        top: calc(50% - 2px);
+        top: 40%;
       }
 
-      &::after {
+      span {
         transform: rotate(45deg);
-        bottom: calc(50% - 2px);
+        top: 40%;
       }
     }
+  }
+}
+
+.burger {
+  display: flex;
+  align-items: center;
+  gap: rem(28);
+}
+
+.burger__phone {
+  display: none;
+
+  @media (max-width:$mobile) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
