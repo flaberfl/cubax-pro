@@ -7,22 +7,25 @@
   &__container {
     @include adaptiveValue("padding-bottom", 76, 83);
     @include adaptiveValue("padding-top", 151, 118);
-    display: grid;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     @include adaptiveValue("gap", 378, 296, 768, 360, 2);
-    // overflow: hidden;
   }
 
   &__content {
     display: grid;
     justify-items: center;
     gap: rem(55);
+    @include adaptiveValue("gap", 55, 83);
+    
   }
 
   /* .main__title */
   &__title {
     position: relative;
     max-width: rem(1025);
+    margin: 0 auto;
 
     text-align: center;
     z-index: 100;
@@ -141,14 +144,12 @@
   &__list {
     position: relative;
     display: grid;
-    // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(12, 1fr);
     gap: rem(20);
 
     z-index: 10;
 
     @media (min-width: em(1700)) {
-      grid-template-columns: repeat(6, 1fr);
       margin: 0 rem(-80);
     }
   }
@@ -160,18 +161,36 @@
 .item-main {
   display: flex;
   flex-direction: column;
-  gap: rem(16);
-  @include adaptiveValue("padding-top", 41, 27);
-  @include adaptiveValue("padding-right", 28, 35);
+  @include adaptiveValue("padding-top", 41, 20);
+  @include adaptiveValue("padding-right", 28, 30);
   @include adaptiveValue("padding-bottom", 32, 40);
   @include adaptiveValue("padding-left", 44, 20);
+  @include adaptiveValue("gap", 16, 0);
+  grid-column: 2 span;
 
   background: #fff;
-  border-radius: rem(30);
+  @include adaptiveValue("border-radius", 30, 20);
+
+  @media (max-width: em(1360)) {
+    grid-column: 3 span;
+  }
+
+  @media (max-width:$tablet) {
+    grid-column: 4 span;
+  }
+
+  @media (max-width:$tablet) {
+    grid-column: 6 span;
+  }
 
   /* .item-main__image */
   &__image {
-    @include adaptiveValue("width", 32, 20);
+
+    svg {
+      @include adaptiveValue("width", 32, 20);
+
+    }
+
 
   }
 
