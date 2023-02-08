@@ -12,10 +12,10 @@
 	color: #fff;
 
 	background-color: $btnColor;
-	
+
 	@media (any-hover: hover) {
 		&:hover {
-			background-color: $btnColor;
+			background-color: #ff5569;
 
 		}
 	}
