@@ -14,8 +14,8 @@ $btnColor: #FF374F;
 $menuItemColor: #828282;
 $burgerColor: #4899B9;
 $scrollMouseColor: #728095;
-$widthHeader: rem(138);
 $iconPhoneColor: #202E43;
+$burger-menuLineColor: #D7DAD8;
 
 // НАСТРОЙКИ ===============================================================================================================================================================================================================================================================================================
 
@@ -45,6 +45,30 @@ body {
 	line-height: 150%;
 	// letter-spacing: 0.04em;
 	// background: #000;
+	// opacity: 0;
+	// transition: opacity 1s ease 0s;
+	
+	&::after {
+		content: '';
+		transition: background-color .3s ease 0s;
+
+		background-color: rgba(0, 0, 0, 0);
+	}
+
+	.menu-open & {
+		&::after {
+			content: '';
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			// background: #000;
+			background-color: rgba(0, 0, 0, 0.5);
+			// opacity: 1;
+			top: 0;
+			left: 0;
+			z-index: 200;
+		}
+	}
 
 	// Скролл заблокирован
 	.lock & {
