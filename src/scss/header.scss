@@ -14,7 +14,10 @@
   &__container {
     display: flex;
     align-items: center;
-    gap: rem(20);
+
+    @media (max-width:$tablet) {
+      gap: rem(20);
+    }
   }
 
   &__logo {
@@ -69,7 +72,7 @@
         padding-left: rem(20);
         padding-right: rem(20);
         gap: rem(41);
-  
+
         overflow: auto;
         background-color: #fff; // цвет меню
         transition: all 0.3s ease 0s;

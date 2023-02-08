@@ -1,22 +1,16 @@
 .main {
 
+  position: relative;
   background: url(@img/background.png) 0 0 / cover no-repeat;
 
   /* .main__container */
   &__container {
     @include adaptiveValue("padding-bottom", 76, 83);
     @include adaptiveValue("padding-top", 151, 118);
-
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
     display: grid;
-    align-items: center;
-    @include adaptiveValue("gap", 378, 296);
-  }
-
-  &__head {
-    // flex: 1 1 100%;
+    justify-items: center;
+    @include adaptiveValue("gap", 378, 296, 768, 360, 2);
+    // overflow: hidden;
   }
 
   &__content {
@@ -31,12 +25,7 @@
     max-width: rem(1025);
 
     text-align: center;
-    z-index: 10;
-  }
-
-  /* .main__decore */
-  &__decore {
-    position: relative;
+    z-index: 100;
   }
 
   /* .main__image */
@@ -45,77 +34,84 @@
 
     &_left,
     &_right {
-      @media (max-width:$tablet) {
+
+      img {
+        max-width: 100%;
+      }
+
+      @media (max-width:$mobile) {
+        display: none;
+      }
+
+      @media (max-width:em(1200)) {
         opacity: 0.4;
       }
     }
 
-
     &_left {
       position: absolute;
       left: 13.5%;
-      top: 35.1%;
-      // padding-bottom: percent(449, 404);
+      top: rem(335);
 
       animation: floating 4s infinite linear;
 
-      @media (min-width: em(1366)) {
+      @media (min-width: em(1760)) {
         z-index: 50;
-      }
-
-      img {
-        max-width: 100%;
       }
     }
 
     &_center {
       position: absolute;
-      // left: 18.2%;
-      top: 29.6%;
-      @include adaptiveValue("left", 350, 10);
-      @include adaptiveValue("top", 300, 400);
-      z-index: 5;
+      @include adaptiveValue("left", 200, -10);
+      @include adaptiveValue("top", 60, 340);
+
+      z-index: 15;
       animation: floating 6s infinite linear;
 
-      // max-width: rem(600);
+      @media (min-width:$tablet) {
+        @include adaptiveValue("top", 282, 200);
+        @include adaptiveValue("left", 525, 100, 1920, 992, 1);
+      }
+
       img {
         max-width: 100%;
       }
-
-      @media (min-width:$mobile) {}
-
-      @media (max-width:$mobile) {
-        img {
-          width: rem(800);
-        }
-      }
-
     }
 
     &_right {
       position: absolute;
-      right: 2.8%;
-      top: 39.2%;
-
+      top: 25.6%;
+      left: 59%;
       animation: floating 4s infinite linear;
 
-      img {
-        max-width: 100%;
+      @media (min-width:em(1700)) {
+        z-index: 30;
       }
-
     }
+  }
 
+  &__cloud {
+    position: absolute;
+    @include adaptiveValue("top", 641, 520);
+    @include adaptiveValue("left", 342, -200);
+
+    z-index: 20;
+
+    img {
+      @include adaptiveValue("width", 1257, 637);
+    }
   }
 
   /* .main__balloon */
   &__balloon {
     position: absolute;
-    top: 24.5%;
+    top: 16%;
     right: 15.5%;
 
     @media (max-width:$mobile) {
       width: rem(35);
       height: rem(46);
+      top: 30%;
     }
 
     animation: floatingX 4s infinite linear;
@@ -123,7 +119,7 @@
     /* .main__balloon_blur */
     &_blur {
       position: absolute;
-      top: 34.5%;
+      top: 22.6%;
       right: 19.9%;
 
       animation: floatingX 8s infinite linear;
@@ -132,8 +128,6 @@
         width: rem(21);
         height: rem(19);
       }
-
-
     }
   }
 
@@ -178,7 +172,7 @@
   /* .item-main__image */
   &__image {
     @include adaptiveValue("width", 32, 20);
-    
+
   }
 
   /* .item-main__text */
