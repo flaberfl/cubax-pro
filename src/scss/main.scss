@@ -4,13 +4,14 @@
 
   /* .main__container */
   &__container {
-    min-height: 100vh;
-    @include adaptiveValue("padding-bottom", 20, 83);
+    // min-height: 100vh;
+    @include adaptiveValue("padding-bottom", 76, 83);
     @include adaptiveValue("padding-top", 151, 118);
 
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include adaptiveValue("gap", 378, 296);
   }
 
   &__head {
@@ -33,72 +34,53 @@
   }
 
   /* .main__decore */
-  &__decore {}
+  &__decore {
+    position: relative;
+  }
 
   /* .main__image */
   &__image {
-    position: absolute;
+    position: relative;
 
-    &_left,
-    &_center,
-    &_right {
-      &::before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-
+    &_left,&_right {
+      @media (max-width: em(1366)){
+         display: none; 
       }
+    }
+
+    img {
+      max-width: 100%;
     }
 
     &_left {
       position: absolute;
       left: 13.5%;
       top: 35.1%;
-
+      // padding-bottom: percent(449, 404);
+      
       animation: floating 4s infinite linear;
-
-      &::before {
-
-        background: url(@img/left-cloud.png) no-repeat;
-        width: 117%;
-        bottom: -67%;
-        left: 0;
+      @media (min-width: em(1366)){
+        z-index: 50;
       }
+      
     }
 
     &_center {
       position: absolute;
-      left: 27.7%;
+      left: 18.2%;
       top: 29.6%;
-      overflow: hidden;
+
+      z-index: 5;
 
       animation: floating 6s infinite linear;
-
-
-      &::before {
-        background: url(@img/center-cloud.png) no-repeat;
-        width: 170%;
-        bottom: -66%;
-        left: -25%;
-      }
     }
 
     &_right {
       position: absolute;
       right: 2.8%;
       top: 39.2%;
-      overflow: hidden;
 
       animation: floating 4s infinite linear;
-
-
-      &::before {
-        background: url(@img/right-cloud.png) no-repeat;
-        bottom: -62%;
-        left: 18%;
-      }
     }
 
   }

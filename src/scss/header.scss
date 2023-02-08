@@ -24,7 +24,7 @@
   //   top: -200%;
 
   //   box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171);
-  
+
   //   @media (min-width:$mobile) {
   //     background-color: red; // Цвет хеадера при скролле
   //     backdrop-filter: blur(15px);
@@ -35,7 +35,7 @@
   //   transition: top 1s ease 0s;
   //   top: 0;
   // }
-  
+
   /* .header__container */
   &__container {
     height: rem(138);
@@ -57,7 +57,9 @@
     z-index: 5;
     display: flex;
     align-items: center;
-    gap: rem(11)
+    gap: rem(12);
+    letter-spacing: .04em;
+
   }
 
   .menu {
@@ -112,15 +114,17 @@
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      row-gap: rem(10);
-      @include adaptiveValue("column-gap", 44, 15);
+      // row-gap: rem(10);
+      @include adaptiveValue("column-gap", 60, 15);
 
-      @media (max-width:$mobile) {
-        flex-direction: column;
-        row-gap: rem(30);
+      letter-spacing: .04em;
 
-        text-align: center;
-      }
+      // @media (max-width:$mobile) {
+      //   flex-direction: column;
+      //   row-gap: rem(30);
+
+      //   text-align: center;
+      // }
     }
 
     /* .menu__list */
