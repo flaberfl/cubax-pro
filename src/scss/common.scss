@@ -1,5 +1,4 @@
 // Заголовки, общие БЄМ блоки и проче...
-
 .title {
   @include adaptiveValue("font-size", 42, 26);
   font-weight: 300;
@@ -22,7 +21,6 @@
   /* .page__main */
   &__main {}
 }
-
 // .body-grid {
 //   display: grid;
 //   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -53,3 +51,4 @@
 //     }
 //   }
 // }
+
