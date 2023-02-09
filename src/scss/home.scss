@@ -1,0 +1,56 @@
+.page {
+
+  /* .page__home */
+  &__home {}
+
+  /* .page__walls */
+  &__walls {}
+}
+
+.home {
+
+  /* .home__container */
+  &__container {}
+}
+
+.walls {
+
+  /* .walls__container */
+  &__container {}
+
+  /* .walls__title */
+  &__title {}
+
+  /* .walls__body */
+  &__body {}
+
+  /* .walls__image */
+  &__image {}
+
+  /* .walls__content */
+  &__content {}
+
+  /* .walls__types */
+  &__types {}
+
+  /* .walls__type */
+  &__type {}
+
+  /* .walls__descr */
+  &__descr {}
+}
+
+.title {
+
+  /* .title_wh */
+  &_wh {}
+}
+
+.type-walls {
+
+  /* .type-walls__title */
+  &__title {}
+
+  /* .type-walls__text */
+  &__text {}
+}
