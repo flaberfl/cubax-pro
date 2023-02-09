@@ -112,13 +112,44 @@
   }
 
   &_01 {
-    top: 1%;
-    right: 1%;
+    top: -11%;
+    right: 24.4%;
   }
+
   &_02 {
-
+    top: 16.2%;
+    right: 28.6%;
   }
+
   &_03 {
-
+    top: 35.4%;
+    right: 26.2%;
   }
+}
+
+.lines {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  right: 0;
+
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.line {
+  width: rem(3);
+  background-color: #fff;
+
+  /* .line_01 */
+  &_01 {
+    height: rem(1);
+    transform: rotate(103deg);
+  }
+
+  /* .line_02 */
+  &_02 {}
+
+  /* .line_03 */
+  &_03 {}
 }
