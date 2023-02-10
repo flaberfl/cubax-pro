@@ -34,7 +34,8 @@
   }
 
   50% {
-    width: rem(210);
+    // @include adaptiveValue("width", 210, 10);
+    width: $widhtAnim;
     // transform: translateY(-4rem);
   }
 }
