@@ -4,9 +4,6 @@
   @include adaptiveValue("padding-top", 219, 125);
   @include adaptiveValue("padding-bottom", 97, 65);
 
-  /* .walls__container */
-  &__container {}
-
   /* .walls__title */
   &__title {
     max-width: rem(1264);
@@ -55,7 +52,6 @@
     }
   }
 
-
   /* .walls__types */
   &__types {
     display: grid;
@@ -65,15 +61,11 @@
     @media (max-width:$tablet) {
       column-gap: rem(21);
       grid-template-columns: repeat(2, 1fr);
-
     }
   }
 
   /* .walls__type */
-  &__type {
-    width: 100%;
-    padding-right: rem(20);
-  }
+  &__type {}
 
   /* .walls__text */
   &__text {
@@ -143,6 +135,7 @@
     height: 100%;
     top: 0;
     left: 0;
+    z-index: 2;
   }
 
   &::after {
@@ -151,26 +144,26 @@
 
     z-index: 1;
 
-    animation: changeOpacity .7s infinite linear;
+    // animation: changeOpacity .7s infinite linear;
   }
 
   &_01 {
-    top: 25px;
-    right: 183px;
+    // top: 25px;
+    // right: 183px;
     top: 6%;
     right: 24.3%;
   }
 
   &_02 {
-    top: 120px;
-    right: 214px;
+    // top: 120px;
+    // right: 214px;
     top: 29%;
     right: 28.6%;
   }
 
   &_03 {
-    top: 187px;
-    right: 196px;
+    // top: 187px;
+    // right: 196px;
     top: 45.2%;
     right: 26.2%;
   }
@@ -178,7 +171,7 @@
 
 .lines {
   position: absolute;
-  width: 27%;
+  width: 27%; // Плашка для скрытия концов линий
   height: 100%;
   top: 0;
   right: 0;
@@ -189,8 +182,8 @@
   &::after {
     content: '';
     position: absolute;
-    width: 5px;
-    height: 5px;
+    width: rem(5);
+    height: rem(5);
     // right: -3px;
     right: -0.3%;
 
@@ -222,21 +215,21 @@
   /* .line_01 */
   &_01 {
     transform: rotate(12.69deg);
-    top: 72px;
+    // top: 72px;
     top: 17.8%;
   }
 
   /* .line_02 */
   &_02 {
     transform: rotate(-13.91deg);
-    top: 74px;
+    // top: 74px;
     top: 18.2%;
   }
 
   /* .line_03 */
   &_03 {
     transform: rotate(20.09deg);
-    top: 264px;
+    // top: 264px;
     top: 65%;
   }
 }
@@ -245,7 +238,7 @@
   position: absolute;
   height: rem(1);
   width: rem(123);
-  bottom: 20px;
+  bottom: rem(20);
   right: 0;
   position: relative;
 
