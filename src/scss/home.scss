@@ -7,7 +7,7 @@
   &__container {
     display: grid;
     justify-items: center;
-    gap: rem(100);
+    // gap: rem(100);
   }
 
   /* .walls__title */
@@ -15,7 +15,7 @@
     max-width: rem(1264);
 
     &:not(:last-child) {
-      margin-bottom: rem(10);
+      margin-bottom: rem(47);
     }
   }
 
@@ -27,20 +27,29 @@
   }
 
   /* .walls__image */
+  &__media {
+    // position: relative;
+  }
+
+  /* .walls__image */
   &__image {
     position: relative;
     padding-right: rem(100);
+
     // padding-bottom: percent(497, 647);
 
+    // object-fit: cover;
+    // background-size: contain;
+
     img {
-      position: absolute;
+      // position: absolute;
       bottom: rem(6);
       left: 0;
 
-      max-width: 100%;
+      // width: 100%;
       // height: 100%;
 
-      object-fit: cover;
+      // object-fit: cover;
 
       filter: drop-shadow(36px 54px 58px rgba(6, 12, 14, 0.44));
     }
@@ -53,7 +62,7 @@
   &__types {
     display: grid;
     gap: rem(55);
-    // padding-left: rem(20);
+    padding-top: rem(63);
   }
 
   /* .walls__type */
@@ -88,8 +97,10 @@
 
 .circle {
   position: absolute;
-  width: 13px;
-  height: 13px;
+  // width: 13px;
+  // height: 13px;
+  @include adaptiveValue("width", 13, 6.7);
+  @include adaptiveValue("height", 13, 6.7);
 
   &::before,
   &::after {
@@ -109,47 +120,87 @@
     background-color: #fff;
 
     z-index: 1;
+
+    animation: changeOpacity .7s infinite linear;
   }
 
   &_01 {
     top: -11%;
     right: 24.4%;
+    // top: -38px;
+    top: 25px;
+    right: 183px;
   }
 
   &_02 {
     top: 16.2%;
     right: 28.6%;
+    top: 120px;
+    right: 214px;
   }
 
   &_03 {
     top: 35.4%;
     right: 26.2%;
+    top: 187px;
+    right: 196px;
   }
 }
 
 .lines {
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  right: 0;
 
-  background-color: #fff;
-  border-radius: 50%;
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #fff;
+
+  }
+
+  &::before {
+    right: -3px;
+    top: 71px;
+
+  }
+
+  &::after {
+    right: -3px;
+    top: 263px;
+  }
 }
 
 .line {
-  width: rem(3);
+  position: absolute;
+  height: rem(1);
+  right: 1px;
+
   background-color: #fff;
+  transform-origin: 100% 50%;
 
   /* .line_01 */
   &_01 {
-    height: rem(1);
-    transform: rotate(103deg);
+    transform: rotate(12.69deg);
+    top: 72px;
+
+    animation: changeWidth 3s infinite linear;
   }
 
   /* .line_02 */
-  &_02 {}
+  &_02 {
+    transform: rotate(-13.91deg);
+    top: 74px;
+
+    animation: changeWidth 3s infinite linear;
+  }
 
   /* .line_03 */
-  &_03 {}
+  &_03 {
+    transform: rotate(20.09deg);
+    top: 264px;
+
+    animation: changeWidth 3s infinite linear;
+  }
 }

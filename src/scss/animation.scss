@@ -26,6 +26,31 @@
   }
 }
 
+@keyframes changeWidth {
+
+  0%,
+  100% {
+    width: rem(0);
+  }
+
+  50% {
+    width: rem(210);
+    // transform: translateY(-4rem);
+  }
+}
+
+@keyframes changeOpacity {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .3;
+  }
+}
+
 .wave {
   animation-name: wave-animation;
 
