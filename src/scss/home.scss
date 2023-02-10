@@ -27,11 +27,6 @@
   }
 
   /* .walls__image */
-  &__media {
-    // position: relative;
-  }
-
-  /* .walls__image */
   &__image {
     position: relative;
     padding-right: rem(100);
@@ -97,8 +92,6 @@
 
 .circle {
   position: absolute;
-  // width: 13px;
-  // height: 13px;
   @include adaptiveValue("width", 13, 6.7);
   @include adaptiveValue("height", 13, 6.7);
 
@@ -125,23 +118,16 @@
   }
 
   &_01 {
-    top: -11%;
-    right: 24.4%;
-    // top: -38px;
     top: 25px;
     right: 183px;
   }
 
   &_02 {
-    top: 16.2%;
-    right: 28.6%;
     top: 120px;
     right: 214px;
   }
 
   &_03 {
-    top: 35.4%;
-    right: 26.2%;
     top: 187px;
     right: 196px;
   }
@@ -179,28 +165,42 @@
 
   background-color: #fff;
   transform-origin: 100% 50%;
+  animation: changeWidth 3s infinite linear;
 
   /* .line_01 */
   &_01 {
     transform: rotate(12.69deg);
     top: 72px;
 
-    animation: changeWidth 3s infinite linear;
   }
 
   /* .line_02 */
   &_02 {
     transform: rotate(-13.91deg);
     top: 74px;
-
-    animation: changeWidth 3s infinite linear;
   }
 
   /* .line_03 */
   &_03 {
     transform: rotate(20.09deg);
     top: 264px;
+  }
+}
 
-    animation: changeWidth 3s infinite linear;
+.size {
+  position: absolute;
+  height: rem(1);
+  width: rem(123);
+  bottom: 20px;
+  right: 0;
+  position: relative;
+
+  background-color: #fff;
+  background-color: #000;
+
+  &::before{
+    content:'';
+    position: absolute;
+    background: url('@img/buisness/arrow-r.svg') 0 0 no-repeat;
   }
 }
