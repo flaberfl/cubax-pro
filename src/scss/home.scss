@@ -223,12 +223,13 @@
   }
 
   &::after {
-    top: 64.5%;
+    top: 64.2%;
 
     @media (max-width:$tablet) {
       top: auto;
       bottom: 0;
-      left: 54%;
+      // left: 54%;
+      right: 45.2%;
     }
   }
 }
@@ -301,28 +302,39 @@
   background-color: #fff;
   // background-color: #000;
 
+  @media (max-width:$tablet){
+    bottom: 32%;
+    left: 75%;
+  }
+
   &::before,
   &::after {
     content: '';
     position: absolute;
     width: rem(11);
     height: rem(14);
-    top: 50%;
-    transform: translate(0px, -50%);
+    // transform: translate(0px, -50%);
+    // top: -50%;
+    top: rem(-6);
+
+    @media (max-width:$tablet) {
+      transform: scale(.6);
+    }
+
     background: url('@img/buisness/arrow-r.svg') 0 0 no-repeat;
   }
 
   &::before {
-    // left: rem(28);
     left: 21%;
   }
 
   &::after {
-    top: 50%;
-    transform-origin: 50% 50%;
-    transform: rotate(180deg) translate(0, 50%);
-    // right: rem(38);
+    transform: rotate(180deg);
     right: 31%;
+
+    @media (max-width:$tablet) {
+      transform: rotate(180deg) scale(.6);
+    }
   }
 
   span {
