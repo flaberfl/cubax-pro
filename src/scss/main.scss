@@ -239,21 +239,34 @@
 //========================================================================================================================================================
 
 .technology {
+  background: url('@img/buisness/back-walls.jpg') 0 0 no-repeat;
+  @include adaptiveValue("padding-top", 182, 125);
+  @include adaptiveValue("padding-bottom", 95, 75);
 
   /* .technology__container */
   &__container {}
 
   /* .technology__title */
-  &__title {}
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(76);
+    }
+  }
 
   /* .technology__body */
   &__body {}
 
   /* .technology__list */
-  &__list {}
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: rem(17);
+  }
 
   /* .technology__item */
   &__item {
+    
 
     /* .technology__item_home */
     &_home {}
@@ -261,12 +274,35 @@
 }
 
 .item-technology {
+  padding: rem(60) rem(53) rem(54) rem(58);
+  
+  border: 1px solid red;
+  border-radius: rem(30);
 
   /* .item-technology__title */
-  &__title {}
+  &__title {
+    @include adaptiveValue("font-size", 26, 16);
+    font-weight: 400;
+    letter-spacing: .04em;
+    color: #fff;
+    line-height: math.div(34, 26);
+    text-transform: uppercase;
+
+    span {
+      display: block;
+      margin-bottom: rem(7);
+
+      @include adaptiveValue("font-size", 42, 26);
+      font-weight: 700;
+      line-height: math.div(34, 42);
+      color: $blueGrayColor;
+    }
+  }
 
   /* .item-technology__image */
-  &__image {}
+  &__image-ibg {
+    padding-bottom: percent(467, 648);
+  }
 
   /* .item-technology__bottom */
   &__bottom {}
