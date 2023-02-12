@@ -1,5 +1,4 @@
 .walls {
-  background-color: #000;
   background: url('@img/buisness/back-walls.jpg') 0 0 / cover no-repeat;
   @include adaptiveValue("padding-top", 219, 125);
   @include adaptiveValue("padding-bottom", 97, 65);
@@ -62,9 +61,6 @@
       grid-template-columns: repeat(2, 1fr);
     }
   }
-
-  /* .walls__type */
-  &__type {}
 
   /* .walls__text */
   &__text {
@@ -228,7 +224,6 @@
     @media (max-width:$tablet) {
       top: auto;
       bottom: 0;
-      // left: 54%;
       right: 45.2%;
     }
   }
@@ -300,11 +295,11 @@
   left: 65.2%;
 
   background-color: #fff;
-  // background-color: #000;
 
-  @media (max-width:$tablet){
+  @media (max-width:$tablet) {
     bottom: 32%;
-    left: 75%;
+    left: 77.8%;
+
   }
 
   &::before,
@@ -313,9 +308,7 @@
     position: absolute;
     width: rem(11);
     height: rem(14);
-    // transform: translate(0px, -50%);
-    // top: -50%;
-    top: rem(-6);
+    top: rem(-7);
 
     @media (max-width:$tablet) {
       transform: scale(.6);
