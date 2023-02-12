@@ -28,6 +28,8 @@
 		background-color: transparent;
 		border: 1px solid $btnColor;
 
+		@include adaptiveValue("height", 70, 50);
+
 		@media (any-hover: hover) {
 			&:hover {
 				background-color: $btnColor;

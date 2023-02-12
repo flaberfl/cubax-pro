@@ -318,31 +318,33 @@
   /* .item-technology__bottom */
   &__bottom {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-
+    
     gap: rem(15);
+    
+    @media (max-width: em(1280)){
+      margin-top: 30px;
+     flex-wrap: wrap;   
+    }
   }
 
   /* .item-technology__icons */
   &__icons {
     display: grid;
     grid-template-columns: repeat(2, auto);
+    grid-template-rows: 30px 1fr;
 
-    justify-self: start;
-
-    flex: 0 1 68%;
-
-
-    // column-gap: rem(15);
     @include adaptiveValue("column-gap", 39, 20);
-    row-gap: rem(20);
+    row-gap: rem(25);
+
+
   }
 
   /* .item-technology__icon */
   &__icon {
     display: flex;
-    align-items: center;
-    align-items: start;
+
     @include adaptiveValue("gap", 20, 10);
 
     @include adaptiveValue("font-size", 16, 12);
