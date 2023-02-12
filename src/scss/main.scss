@@ -260,13 +260,11 @@
   &__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-
     gap: rem(17);
   }
 
   /* .technology__item */
   &__item {
-
 
     /* .technology__item_home */
     &_home {}
@@ -277,7 +275,6 @@
   display: flex;
   flex-direction: column;
 
-  padding: rem(60) rem(53) rem(60) rem(58);
   @include adaptiveValue("padding-left", 58, 0);
   @include adaptiveValue("padding-bottom", 60, 0);
   @include adaptiveValue("padding-top", 60, 0);
@@ -322,9 +319,6 @@
   &__bottom {
     display: flex;
     justify-content: space-between;
-    // // display: grid;
-    // align-items: center;
-    // grid-template-columns: auto 1fr;
 
     gap: rem(15);
   }
