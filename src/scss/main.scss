@@ -274,20 +274,22 @@
 }
 
 .item-technology {
-  display: grid;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: space-between;
-  padding: rem(60) rem(53) rem(54) rem(58);
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+
+  padding: rem(60) rem(53) rem(60) rem(58);
+  @include adaptiveValue("padding-left", 58, 0);
+  @include adaptiveValue("padding-bottom", 60, 0);
+  @include adaptiveValue("padding-top", 60, 0);
+  @include adaptiveValue("padding-right", 53, 0);
 
   border: 1px solid red;
   border-radius: rem(30);
 
   /* .item-technology__title */
   &__title {
+    margin-bottom: rem(24);
+
     @include adaptiveValue("font-size", 26, 16);
     font-weight: 400;
     letter-spacing: .04em;
@@ -308,32 +310,58 @@
 
   /* .item-technology__image */
   &__image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    // align-items: center;
-    // // flex: 0 1 auto;
-     // padding-bottom: percent(467, 648);
-    // padding-bottom: percent(310, 482);
-    // padding-bottom: percent(372, 649);
+    text-align: center;
+    flex: 1 1 auto;
 
     img {
-      // margin: 0 auto;
       max-width: 100%;
     }
   }
 
   /* .item-technology__bottom */
-  &__bottom {}
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    // // display: grid;
+    // align-items: center;
+    // grid-template-columns: auto 1fr;
+
+    gap: rem(15);
+  }
 
   /* .item-technology__icons */
-  &__icons {}
+  &__icons {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+
+    justify-self: start;
+
+    flex: 0 1 68%;
+
+
+    // column-gap: rem(15);
+    @include adaptiveValue("column-gap", 39, 20);
+    row-gap: rem(20);
+  }
 
   /* .item-technology__icon */
-  &__icon {}
+  &__icon {
+    display: flex;
+    align-items: center;
+    align-items: start;
+    @include adaptiveValue("gap", 20, 10);
+
+    @include adaptiveValue("font-size", 16, 12);
+    font-weight: 450;
+    letter-spacing: .04em;
+    line-height: math.div(27, 16);
+    color: #fff;
+  }
 
   /* .item-technology__button */
-  &__button {}
+  &__button {
+    justify-self: end;
+  }
 }
 
 .button {

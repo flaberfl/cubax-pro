@@ -3,12 +3,14 @@
 
 .button {
 	display: inline-flex;
-	padding: 0px 0px;
 	width: rem(220);
 	height: rem(70);
 	justify-content: center;
 	align-items: center;
 	border-radius: rem(35);
+
+	font-size: rem(16);
+	font-weight: 700;
 	color: #fff;
 
 	transition: all 0.3s ease 0s;
@@ -22,6 +24,7 @@
 	}
 
 	&_outline {
+		width: rem(180);
 		background-color: transparent;
 		border: 1px solid $btnColor;
 
