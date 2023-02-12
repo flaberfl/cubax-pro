@@ -294,35 +294,35 @@
 .size-line {
   position: absolute;
   height: rem(1);
-  width: rem(123);
   @include adaptiveValue("width", 123, 58);
-  width: 123px;
   bottom: 30.7%;
-  right: 18.3%;
+  left: 65.2%;
 
   background-color: #fff;
-  background-color: #000;
+  // background-color: #000;
 
   &::before,
   &::after {
     content: '';
     position: absolute;
-    width: 11px;
-    height: 14px;
+    width: rem(11);
+    height: rem(14);
     top: 50%;
     transform: translate(0px, -50%);
     background: url('@img/buisness/arrow-r.svg') 0 0 no-repeat;
   }
 
   &::before {
-    left: rem(28);
+    // left: rem(28);
+    left: 21%;
   }
 
   &::after {
     top: 50%;
     transform-origin: 50% 50%;
-    transform: rotate(-180deg) translate(0px, -50%);
-    left: rem(56);
+    transform: rotate(180deg) translate(0, 50%);
+    // right: rem(38);
+    right: 31%;
   }
 
   span {
@@ -335,5 +335,4 @@
     color: #fff;
     line-height: math.div(22, 10);
   }
-
 }
