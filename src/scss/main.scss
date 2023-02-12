@@ -235,3 +235,54 @@
     line-height: 157%;
   }
 }
+
+//========================================================================================================================================================
+
+.technology {
+
+  /* .technology__container */
+  &__container {}
+
+  /* .technology__title */
+  &__title {}
+
+  /* .technology__body */
+  &__body {}
+
+  /* .technology__list */
+  &__list {}
+
+  /* .technology__item */
+  &__item {
+
+    /* .technology__item_home */
+    &_home {}
+  }
+}
+
+.item-technology {
+
+  /* .item-technology__title */
+  &__title {}
+
+  /* .item-technology__image */
+  &__image {}
+
+  /* .item-technology__bottom */
+  &__bottom {}
+
+  /* .item-technology__icons */
+  &__icons {}
+
+  /* .item-technology__icon */
+  &__icon {}
+
+  /* .item-technology__button */
+  &__button {}
+}
+
+.button {
+
+  /* .button_outline */
+  &_outline {}
+}

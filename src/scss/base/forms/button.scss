@@ -11,12 +11,24 @@
 	border-radius: rem(35);
 	color: #fff;
 
+	transition: all 0.3s ease 0s;
+
 	background-color: $btnColor;
 
 	@media (any-hover: hover) {
 		&:hover {
 			background-color: #ff5569;
+		}
+	}
 
+	&_outline {
+		background-color: transparent;
+		border: 1px solid $btnColor;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $btnColor;
+			}
 		}
 	}
 }
