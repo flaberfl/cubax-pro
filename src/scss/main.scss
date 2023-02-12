@@ -266,7 +266,7 @@
 
   /* .technology__item */
   &__item {
-    
+
 
     /* .technology__item_home */
     &_home {}
@@ -274,8 +274,15 @@
 }
 
 .item-technology {
+  display: grid;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
   padding: rem(60) rem(53) rem(54) rem(58);
-  
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
+
   border: 1px solid red;
   border-radius: rem(30);
 
@@ -300,8 +307,20 @@
   }
 
   /* .item-technology__image */
-  &__image-ibg {
-    padding-bottom: percent(467, 648);
+  &__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // align-items: center;
+    // // flex: 0 1 auto;
+     // padding-bottom: percent(467, 648);
+    // padding-bottom: percent(310, 482);
+    // padding-bottom: percent(372, 649);
+
+    img {
+      // margin: 0 auto;
+      max-width: 100%;
+    }
   }
 
   /* .item-technology__bottom */
