@@ -1,5 +1,44 @@
-<section class="block">
-  <div class="block__container">
-      
+<section class="page__contacts contacts">
+  <div class="contacts__container">
+    <div class="contacts__body">
+      <div class="contacts__items">
+        <h2 class="contacts__title">Контакты</h2>
+        <div class="contacts__item contacts__adress _icon-maps">г. Москва, ул. Печерского Павла 321</div>
+        <div class="contacts__item contacts__phone _icon-phone"><a href=" tel:+380406576909">+38 (040) 657-69-09</a>
+        </div>
+        <div class="contacts__item contacts__mail _icon-mail"><a href="mailto:cubax_info@com"
+            class="">cubax_info@com</a></div>
+      </div>
+
+    </div>
+
+    <form class="contacts__form" action="#">
+      <h2 class="form__title">Возникли вопросы?
+        Оставьте заявку и наши менеджеры связуться с вами
+        в ближайшее время</h2>
+      <div class="form__item form__item_name">
+        <input autocomplete="off" type="text" name="name" data-error="Не заполненное поле!" placeholder="Ваше имя"
+          class="form__input">
+      </div>
+      <div class="form__item form__item_phone">
+        <input autocomplete="off" type="number" name="phone" data-error="Не заполненное поле!"
+          placeholder="Контактный номер телефона" class="form__input">
+      </div>
+      <div class="form__item form__item_checkbox">
+        <div class="checkbox">
+          <input id="c_1" data-error="Не выбрано поле" class="checkbox__input" type="checkbox" value="1" name="form[]">
+          <label for="c_1" class="checkbox__label"><span class="checkbox__text">Даю согласие на обработку персональных
+              данных</span></label>
+        </div>
+        <div class="form__item">
+          <button type="submit" class="main__button button">Оставить заявку</button>
+        </div>
+      </div>
+    </form>
+
+    <div class="contacts__scroll-up">
+      <img src="@img/icons/scroll-up.svg" alt="подняться вверх">
+      <span>подняться вверх</span>
+    </div>
   </div>
 </section>

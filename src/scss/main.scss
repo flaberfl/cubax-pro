@@ -242,10 +242,6 @@
   background: url('@img/buisness/back-walls.jpg') center / cover no-repeat;
   @include adaptiveValue("padding-top", 182, 125);
   @include adaptiveValue("padding-bottom", 95, 75);
-  // background-size: auto;
-
-  /* .technology__container */
-  &__container {}
 
   /* .technology__title */
   &__title {
@@ -266,57 +262,29 @@
       gap: rem(17);
       grid-template-columns: repeat(2, 1fr);
     }
-
-  }
-
-  /* .technology__item */
-  &__item {
-
-    /* .technology__item_home */
-    &_home {}
   }
 }
 
 .item-technology {
   display: flex;
   flex-direction: column;
-  position: relative;
 
   @include adaptiveValue("padding-left", 58, 0);
   @include adaptiveValue("padding-bottom", 60, 0);
   @include adaptiveValue("padding-top", 60, 0);
   @include adaptiveValue("padding-right", 53, 0);
 
+  transition: all 0.6s ease 0s;
 
   @media (any-hover: hover) {
     &:hover {
+
       border: 2px solid transparent;
       border-image: linear-gradient(229.98deg, #63AFCD 0.98%, rgba(99, 175, 205, 0.04) 35.78%, rgba(99, 175, 205, 0) 64.03%, #63AFCD 97.83%);
       background: rgba(73, 93, 124, 0.1);
       border-image-slice: 1;
-
-      &::before {
-        // border-radius: rem(30);
-        // content:'';
-        // position: absolute;
-        // width: 100%;
-        // height: 100%;
-        // background: url('@img/technology/hover-overlay.svg') 0 0 no-repeat;
-
-      }
     }
   }
-
-
-  // border-image: linear-gradient(0deg, rgba(73, 93, 124, 0.1), rgba(73, 93, 124, 0.1)),
-  //   linear-gradient(229.98deg, #63AFCD 0.98%, rgba(99, 175, 205, 0.04) 35.78%, rgba(99, 175, 205, 0) 64.03%, #63AFCD 97.83%);
-  // border-radius: rem(30);
-
-
-
-  // border: 2px solid transparent;
-  // background-image: linear-gradient(229.98deg, #63AFCD 0.98%, rgba(99, 175, 205, 0.04) 35.78%, rgba(99, 175, 205, 0) 64.03%, #63AFCD 97.83%);
-
 
   /* .item-technology__title */
   &__title {
@@ -360,7 +328,6 @@
     gap: rem(15);
 
     @media (max-width: em(1280)) {
-      // margin-top: 30px;
       @include adaptiveValue("margin-top", 30, 10);
       flex-wrap: wrap;
       gap: rem(26);
@@ -399,16 +366,132 @@
     }
   }
 
-
-
   /* .item-technology__button */
   &__button {
     justify-self: end;
   }
 }
 
-.button {
+//========================================================================================================================================================
 
-  /* .button_outline */
-  &_outline {}
+.contacts {
+
+  background: url('@img/contacts/background-contacts.jpg') center / cover no-repeat;
+
+  /* .contacts__container */
+  &__container {}
+
+  /* .contacts__body */
+  &__body {
+    padding: rem(13);
+
+    background-color: $blueGrayColor;
+    border-radius: rem(30);
+  }
+
+  /* .contacts__title */
+  &__title {
+    @include adaptiveValue("margin-bottom", 30, 30);
+
+    font-size: rem(26);
+    line-height: math.div(27, 26);
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+  }
+
+  /* .contacts__items */
+  &__items {
+    padding: rem(57) rem(20) rem(36) rem(42);
+
+
+    border-radius: rem(20);
+    border: 1px solid #fff;
+    font-size: rem(16);
+    line-height: math.div(27, 16);
+    font-weight: 450;
+    color: #fff;
+    letter-spacing: .04em;
+  }
+
+  /* .contacts__item */
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: rem(13);
+
+    &:not(:last-child) {
+      margin-bottom: rem(15);
+    }
+  }
+
+  /* .contacts__adress */
+  &__adress {
+    &::before {
+      font-size: rem(21);
+    }
+  }
+
+  /* .contacts__phone */
+  &__phone {
+    &::before {
+      font-size: rem(18);
+    }
+  }
+
+  /* .contacts__mail */
+  &__mail {
+    &::before {
+      font-size: rem(14);
+    }
+  }
+
+  /* .contacts__form */
+  &__form {}
+
+  /* .contacts__scroll-up */
+  &__scroll-up {}
 }
+
+.form {
+
+  /* .form__title */
+  &__title {}
+
+  /* .form__item */
+  &__item {
+
+    /* .form__item_name */
+    &_name {}
+
+    /* .form__item_phone */
+    &_phone {}
+
+    /* .form__item_checkbox */
+    &_checkbox {}
+  }
+
+  /* .form__input */
+  &__input {}
+}
+
+.checkbox {
+
+  /* .checkbox__input */
+  &__input {}
+
+  /* .checkbox__label */
+  &__label {}
+
+  /* .checkbox__text */
+  &__text {}
+}
+
+.main {
+
+  /* .main__button */
+  &__button {}
+}
+
+.button {}
