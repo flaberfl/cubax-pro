@@ -239,9 +239,10 @@
 //========================================================================================================================================================
 
 .technology {
-  background: url('@img/buisness/back-walls.jpg') 0 0 no-repeat;
+  background: url('@img/buisness/back-walls.jpg') 0 0 / cover no-repeat;
   @include adaptiveValue("padding-top", 182, 125);
   @include adaptiveValue("padding-bottom", 95, 75);
+  // background-size: auto;
 
   /* .technology__container */
   &__container {}
@@ -259,8 +260,12 @@
   /* .technology__list */
   &__list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: rem(17);
+    
+    @media (min-width:$mobile) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
   }
 
   /* .technology__item */
@@ -320,12 +325,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+
     gap: rem(15);
-    
-    @media (max-width: em(1280)){
+
+    @media (max-width: em(1280)) {
       margin-top: 30px;
-     flex-wrap: wrap;   
+      flex-wrap: wrap;
     }
   }
 
@@ -337,14 +342,12 @@
 
     @include adaptiveValue("column-gap", 39, 20);
     row-gap: rem(25);
-
-
   }
 
   /* .item-technology__icon */
   &__icon {
     display: flex;
-
+    align-items: center;
     @include adaptiveValue("gap", 20, 10);
 
     @include adaptiveValue("font-size", 16, 12);
