@@ -8,17 +8,39 @@ textarea {
 	-moz-appearance: none;
 	appearance: none;
 }
+
 .input {
 	border-radius: 0 !important;
 	width: 100%;
 	display: block;
-	padding: 0px 20px;
-	border: 1px solid #eee;
-	&._focus {
-	}
-	&._error {
+
+	width: rem(374);
+	height: rem(57);
+
+	font-weight: 400;
+	color: $menuItemColor;
+	color: #000;
+	letter-spacing: .04em;
+	line-height: math.div(24, 16);
+
+
+
+	// display: flex;
+	// align-items: center;
+
+	// padding-bottom: rem(17);
+
+	border-bottom: 1px solid $blueGrayColor;
+
+	&._focus {}
+
+	&._error {}
+
+	&.placeholder {
+		color: $menuItemColor;
 	}
 }
+
 textarea.input {
 	resize: none;
 	padding: 0px 0px;

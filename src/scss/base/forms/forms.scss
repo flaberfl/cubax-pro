@@ -9,6 +9,9 @@
 	&__button {
 	}
 	&__error {
+		position: absolute;
+		top: -20px;
+		color: red;
 	}
 }
 //</FORM>
@@ -20,11 +23,11 @@
 
 // <INPUTS>
 // Снипет (HTML): inp
-// @import "input";
+@import "input";
 
 // <CHECK>
 // Снипет (HTML): chk
-// @import "checkbox";
+@import "checkbox";
 
 // <RADIO>
 // Снипет (HTML): opt
