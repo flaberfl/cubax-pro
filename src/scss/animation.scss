@@ -53,6 +53,20 @@
   }
 }
 
+@keyframes changeWidthScrollBtn {
+
+  0%,
+  100% {
+    // transform: scale(1);
+    transform: translate(-100%, 0px) scale(0.52);
+  }
+
+  50% {
+    transform: translate(-100%, 0px) scale(1);
+  }
+
+}
+
 .wave {
   animation-name: wave-animation;
 
