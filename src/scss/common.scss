@@ -1,4 +1,16 @@
 // Заголовки, общие БЄМ блоки и проче...
+.page {
+
+  /* .page__main */
+  &__main {}
+
+  /* .page__technology */
+  &__technology {}
+
+  /* .page__contacts */
+  &__contacts {}
+}
+
 .title {
   @include adaptiveValue("font-size", 42, 26);
   font-weight: 300;
@@ -16,17 +28,30 @@
   }
 }
 
-.page {
+.circle-block {
+  position: relative;
+  padding: rem(21);
+  width: $widthCircle;
+  height: $widthCircle;
 
-  /* .page__main */
-  &__main {}
+  // left: 20%;
 
-  /* .page__technology */
-  &__technology {}
+  border-radius: 50%;
+  background-color: #fff;
 
-  /* .page__contacts */
-  &__contacts {}
+
 }
+
+// .circle-aura {
+
+//   background: #fff;
+//   // opacity: 0.3;
+//   border-radius: 50%;
+//   position: absolute;
+//   top: 50%;
+//   transform: translate(0px, -50%);
+// }
+
 
 // .body-grid {
 //   display: grid;

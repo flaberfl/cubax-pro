@@ -35,18 +35,23 @@
 		align-items: center;
 		position: relative;
 		gap: rem(28);
-
+		@include adaptiveValue("gap", 28, 18);
+		
 		&:before {
 			content: "";
-
-			width: 30px;
-			height: 30px;
+			flex: 0 0 rem(30);
+			width: rem(30);
+			height: rem(30);
 			border-radius: rem(10);
 			border: 1px solid #D9D9D9;
-
+			
+		}
+		
+		@media (max-width:$mobile){
+			align-items: start;
 		}
 	}
-
+	
 	// .checkbox__text
 	&__text {
 		font-size: rem(12);
