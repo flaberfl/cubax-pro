@@ -47,7 +47,7 @@ $mobileSmall: em(479.98);
 body {
 	font-weight: 700;
 	line-height: 150%;
-	// letter-spacing: 0.04em;
+	letter-spacing: 0.04em;
 
 	&::after {
 		content: '';
@@ -86,6 +86,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
+	position: relative;
 
 	// Прижимаем footer
 	>main {

@@ -21,22 +21,29 @@
 		letter-spacing: .04em;
 
 		span {
-			display: block;
+			font-weight: 300;
+
+			&:first-child {
+				display: block;
+				font-weight: 700;
+			}
 
 			@media (max-width:$mobileSmall) {
+				display: block;
 				margin-bottom: rem(7);
 			}
 		}
 
 		@media (max-width:$mobileSmall) {
 			max-width: rem(320);
-			line-height: 1.4;
+			line-height: 1.5;
 		}
 	}
 
 	&__item {
 		position: relative;
 		display: flex;
+		justify-content: center;
 		align-items: center;
 
 		@media (max-width:$mobile) {
@@ -55,27 +62,30 @@
 			&::before {
 				color: $blueGrayColor;
 
-				@media (max-width:$mobile){
-					 display: none; 
+				@media (max-width:$mobile) {
+					display: none;
 				}
 			}
 		}
 
 		/* .form__item_phone */
 		&_phone {
-			@include adaptiveValue("margin-bottom", 42, 30);
+			@include adaptiveValue("margin-bottom", 42, 40);
 
 			&::before {
 				color: $blueGrayColor;
 
-				@media (max-width:$mobile){
-					 display: none; 
+				@media (max-width:$mobile) {
+					display: none;
 				}
 			}
 		}
 
 		/* .form__item_checkbox */
 		&_checkbox {
+			@media (max-width:$mobileSmall) {
+				padding-right: rem(30);
+			}
 		}
 	}
 
