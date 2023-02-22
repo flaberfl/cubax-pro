@@ -39,11 +39,17 @@
     z-index: 5;
     display: flex;
     align-items: center;
+    mix-blend-mode: difference;
+    filter: invert(1);
+    color: white;
 
     flex: 0 0 auto;
 
     gap: rem(12);
-    letter-spacing: .04em;
+
+    &::before {
+      font-size: rem(22);
+    }
 
     @media (max-width:$mobile) {
       padding: rem(21) 0 rem(26);
@@ -109,8 +115,6 @@
       flex-wrap: wrap;
       @include adaptiveValue("column-gap", 60, 15, 1920, 992, 1);
 
-      letter-spacing: .04em;
-
       @media (max-width:$mobile) {
         flex-direction: column;
         row-gap: rem(42);
@@ -133,6 +137,7 @@
 
       @media (any-hover: hover) {
         &:hover {
+
           color: #000;
         }
       }
@@ -199,6 +204,8 @@
   display: flex;
   align-items: center;
   gap: rem(28);
+
+  font-size: rem(22);
 }
 
 .burger__phone {
@@ -206,7 +213,5 @@
 
   @media (max-width:$mobile) {
     display: flex;
-    justify-content: center;
-    align-items: center;
   }
 }
