@@ -9,25 +9,11 @@ import {
 
 
 
-// document.body.onscroll = function () {
-//   document.querySelector('.technology').classList.add('black');
-// }
+document.onscroll = function () {
+  var dark = document.querySelector("#dark").getBoundingClientRect().top;
+  document.body.classList.toggle("dark", dark <= window.innerHeight);
+  var light = document.querySelector("#light").getBoundingClientRect().top;
 
-
-window.addEventListener('scroll', () => {
-  let scrollDistance = window.scrollY;
-
-  if (window.innerWidth > 768) {
-    document.querySelectorAll('.page').forEach((el, i) => {
-      if (el.offsetTop - document.querySelector('.menu__list').clientHeight <= scrollDistance) {
-        document.querySelectorAll('.menu__list a').forEach((el) => {
-          if (el.classList.contains('active')) {
-            el.classList.remove('active');
-          }
-        });
-
-        document.querySelectorAll('.menu__list li')[i].querySelector('a').classList.add('active');
-      }
-    });
-  }
-});
+  document.body.classList.remove("dark");
+  document.body.classList.toggle("light", light <= window.innerHeight);
+}

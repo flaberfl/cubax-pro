@@ -39,9 +39,6 @@
     z-index: 5;
     display: flex;
     align-items: center;
-    mix-blend-mode: difference;
-    filter: invert(1);
-    color: white;
 
     flex: 0 0 auto;
 
@@ -137,7 +134,6 @@
 
       @media (any-hover: hover) {
         &:hover {
-
           color: #000;
         }
       }

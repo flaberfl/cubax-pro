@@ -43,7 +43,7 @@
   Попапы
   Сниппет (HTML): pl
   */
-  // import './libs/popup.js'
+  import './libs/popup.js'
 
   /*
   Модуль параллакса мышью
@@ -147,7 +147,7 @@
   flsScroll.pageNavigation();
 
   // Функционал добавления классов к хедеру при прокрутке
-  flsScroll.headerScroll();
+  // flsScroll.headerScroll();
 
   // Функционал липкого блока
   // flsScroll.stickyBlock();
