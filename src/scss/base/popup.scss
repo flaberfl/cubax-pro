@@ -65,6 +65,17 @@ body::after {
 	.lock & {
 		visibility: visible;
 	}
+
+	&_cb {
+		position: relative;
+		padding: rem(21);
+		width: $widthCircle;
+		height: $widthCircle;
+
+		border-radius: 50%;
+		background-color: #fff;
+
+	}
 }
 
 .popup__close {
@@ -73,10 +84,10 @@ body::after {
 
 	right: 42px;
 	top: 42px;
-	
+
 	z-index: 999;
-	
-	@media (max-width:$mobile){
+
+	@media (max-width:$mobile) {
 		right: rem(20);
 		top: rem(10);
 	}
@@ -90,7 +101,7 @@ body::after {
 		height: 30px;
 		@include adaptiveValue("height", 30, 20);
 		width: 6px;
-		background-color: #000;
+		background-color: #fff;
 	}
 
 	&::before {
@@ -101,11 +112,12 @@ body::after {
 		transform: rotate(-45deg);
 	}
 
-	&_light {
+	&_black {
 
 		&::before,
 		&::after {
 			width: rem(3);
+			background-color: #000;
 		}
 	}
 }
@@ -120,8 +132,8 @@ body::after {
 		@include adaptiveValue("padding-left", 128, 20);
 
 		border-radius: rem(50);
-		
-		@media (max-width:$mobile){
+
+		@media (max-width:$mobile) {
 			border-radius: rem(20);
 		}
 	}
@@ -132,8 +144,8 @@ body::after {
 		padding-bottom: rem(105);
 		@include adaptiveValue("padding-bottom", 105, 20);
 
-		@media (max-width:$mobileSmall){
-			 align-items: center;
+		@media (max-width:$mobileSmall) {
+			align-items: center;
 		}
 	}
 
@@ -160,13 +172,14 @@ body::after {
 		flex: 1 1 auto;
 
 	}
+
 	&__image {
 		img {
 			max-width: 100%;
 		}
 
-		@media (max-width:$mobileSmall){
-			 display: none; 
+		@media (max-width:$mobileSmall) {
+			display: none;
 		}
 	}
 }
