@@ -23,7 +23,8 @@
 		}
 	}
 
-	&_outline {
+	&_outline,
+	&_transp {
 		width: rem(180);
 		background-color: transparent;
 		border: 1px solid $btnColor;
@@ -35,5 +36,9 @@
 				background-color: $btnColor;
 			}
 		}
+	}
+
+	&_transp {
+		color: #000;
 	}
 }

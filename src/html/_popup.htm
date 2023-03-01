@@ -7,12 +7,18 @@
 		</div>
 	</div>
 </div> -->
-<div id="form-message" aria-hidden="true" class="popup form-popup">
+<div id="form-message" aria-hidden="false" class="popup popup__thanks thanks-popup popup_show">
 	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<h3 class="form-popup__title">Благодарим за доверие!</h3>
-			<p class="form-popup__text">Наши менеджеры свяжутся с Вами в ближайшее время.</p>
+		<div class="popup__content thanks-popup__content">
+			<button data-close type="button" class="popup__close popup__close_light"></button>
+			<div class="thanks-popup__info">
+				<h3 class="thanks-popup__title">Благодарим за доверие!</h3>
+				<p class="thanks-popup__text">Наши менеджеры свяжутся с Вами в ближайшее время.</p>
+				<button type="submit" class="button button_transp">На главную</button>
+			</div>
+			<div class="thanks-popup__image">
+				<img src="@img/popup-img.png" alt="Девушка менеджер">
+			</div>
 		</div>
 	</div>
 </div>
