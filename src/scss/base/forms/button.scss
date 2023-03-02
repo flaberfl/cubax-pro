@@ -40,5 +40,10 @@
 
 	&_transp {
 		color: #000;
+		@media (any-hover: hover){
+			&:hover{
+				color: #fff;
+			}
+		}
 	}
 }

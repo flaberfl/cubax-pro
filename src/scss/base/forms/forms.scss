@@ -18,7 +18,6 @@
 
 		@include adaptiveValue("font-size", 26, 20);
 		line-height: math.div(34, 26);
-		letter-spacing: .04em;
 
 		span {
 			font-weight: 300;
@@ -86,6 +85,10 @@
 			@media (max-width:$mobileSmall) {
 				padding-right: rem(30);
 			}
+
+			.form__error {
+				top: -50%;
+			}
 		}
 	}
 
@@ -95,7 +98,8 @@
 
 	&__error {
 		position: absolute;
-		top: -20px;
+		left: 0;
+		top: 0;
 		color: red;
 	}
 }
