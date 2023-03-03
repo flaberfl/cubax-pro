@@ -532,3 +532,32 @@
   /* .contacts__scroll-up */
   &__scroll-up {}
 }
+
+
+// header1 {
+//   background: purple;
+//   padding: 1rem;
+//   color: white;
+
+//   body.header-not-at-top & {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//   }
+
+//   @at-root {
+//     body.header-not-at-top {
+//       padding-top: 44px;
+//     }
+//   }
+
+// }
+
+#anchor-black-th {
+  position: absolute;
+  // width: 10px;
+  // height: 100px;
+  top: 500px;
+  left: 0;
+}

@@ -26,7 +26,7 @@
 
     img {
       @include adaptiveValue("width", 185, 156);
-      @include adaptiveValue("hight", 46, 39);
+      // @include adaptiveValue("height", 46, 39);
     }
   }
 
@@ -73,7 +73,7 @@
         padding-left: rem(20);
         padding-right: rem(20);
         gap: rem(41);
-
+  
         overflow: auto;
         background-color: #fff; // цвет меню
         transition: all 0.3s ease 0s;
@@ -106,6 +106,7 @@
 
     /* .menu__list */
     &__list {
+
       display: flex;
       justify-content: center;
       align-items: center;
