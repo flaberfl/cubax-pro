@@ -53,32 +53,27 @@
 		&::before {
 			position: absolute;
 			right: 0;
+			color: $blueGrayColor;
 
 			font-size: rem(22);
+
+			@media (max-width:$mobile) {
+				display: none;
+			}
 		}
 
 		/* .form__item_name */
-		&_name {
-			&::before {
-				color: $blueGrayColor;
-
-				@media (max-width:$mobile) {
-					display: none;
-				}
-			}
-		}
+		&_name {}
 
 		/* .form__item_phone */
 		&_phone {
 			@include adaptiveValue("margin-bottom", 42, 40);
+		}
 
-			&::before {
-				color: $blueGrayColor;
-
-				@media (max-width:$mobile) {
-					display: none;
-				}
-			}
+		/* .form__item_textarea */
+		&_textarea {
+			@include adaptiveValue("margin-top", 32, 30);
+			@include adaptiveValue("margin-bottom", 32, 30);
 		}
 
 		/* .form__item_checkbox */
@@ -98,6 +93,12 @@
 		top: -20px;
 		color: red;
 	}
+}
+
+textarea.form__input {
+	resize: vertical;
+	padding: 0px 0px;
+	height: rem(42);
 }
 
 //</FORM>

@@ -9,7 +9,7 @@ textarea {
 	appearance: none;
 }
 
-.input, textarea{
+.input {
 	border-radius: 0 !important;
 	width: 100%;
 	display: block;
@@ -39,9 +39,4 @@ textarea {
 	&.placeholder {
 		color: $menuItemColor;
 	}
-}
-
-textarea.input {
-	resize: none;
-	padding: 0px 0px;
 }
