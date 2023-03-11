@@ -19,19 +19,19 @@ import {
 // }
 
 
-if (
-  "IntersectionObserver" in window &&
-  "IntersectionObserverEntry" in window &&
-  "intersectionRatio" in window.IntersectionObserverEntry.prototype
-) {
-  let observer = new IntersectionObserver(entries => {
-    if (entries[0].boundingClientRect.y < 0) {
-      document.body.classList.add("header-not-at-top");
-    } else {
-      document.body.classList.remove("header-not-at-top");
-    }
-  });
-  observer.observe(document.querySelector("#anchor-black-th"));
-}
+// if (
+//   "IntersectionObserver" in window &&
+//   "IntersectionObserverEntry" in window &&
+//   "intersectionRatio" in window.IntersectionObserverEntry.prototype
+// ) {
+//   let observer = new IntersectionObserver(entries => {
+//     if (entries[0].boundingClientRect.y < 0) {
+//       document.body.classList.add("header-not-at-top");
+//     } else {
+//       document.body.classList.remove("header-not-at-top");
+//     }
+//   });
+//   observer.observe(document.querySelector("#anchor-black-th"));
+// }
 
-console.log (ob)
+// console.log (ob)

@@ -23,12 +23,12 @@
 	</div>
 </div>
 
-<div id="popup" aria-hidden="true" class="popup popup_show1s">
+<div id="popup-submit" aria-hidden="true" class="popup popup__submit popup_show1">
 	<div class="popup__wrapper">
 		<div class="popup__content popup__content_cb">
 			<button data-close type="button" class="popup__close">x</button>
 			<form class="form" action="#">
-				<h2 class="form__title title"><span>Возникли вопросы?</span>Оставьте заявку и наши менеджеры свяжуться <span>с
+				<h2 class="form__title title"><span>Оставьте заявку</span> и наши менеджеры свяжуться <span>с
 						вами</span>
 					в ближайшее время</h2>
 				<div class="form__item form__item_name _icon-avatar">
@@ -47,8 +47,43 @@
 								данных</span></label>
 					</div>
 				</div>
-				<div class="form__item" id="light">
-					<button type="submit" class="form__button button">Оставить заявку</button>
+				<div class="form__item">
+					<button type="submit" class="form__button button">Отправить</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div id="popup-ask" aria-hidden="true" class="popup popup__ask popup_show">
+	<div class="popup__wrapper">
+		<div class="popup__content popup__content_cb">
+			<button data-close type="button" class="popup__close">x</button>
+			<form class="form" action="#">
+				<h2 class="form__title title"><span>Задать свой вопрос</span></h2>
+				<div class="form__item form__item_name _icon-avatar">
+					<input autocomplete="off" type="text" name="name" data-required data-error="Не заполненное поле!"
+						placeholder="Ваше имя" class="form__input input">
+				</div>
+				<div class="form__item form__item_phone _icon-phone">
+					<input autocomplete="off" type="text" name="phone" data-required data-error="Не заполненное поле!"
+						placeholder="Контактный номер телефона" class="form__input input">
+				</div>
+
+				<div class="form__item form__item_textarea">
+					<textarea name="ask" id="ask" cols="1" rows="1" placeholder="Введите текст своего вопроса" data-required
+						data-error="Не заполненное поле!"></textarea>
+				</div>
+				<div class="form__item form__item_checkbox">
+					<div class="checkbox">
+						<input id="c_3" data-error="Не выбрано поле" data-required class="checkbox__input" type="checkbox" value="1"
+							name="checkbox">
+						<label for="c_3" class="checkbox__label"><span class="checkbox__text">Даю согласие на обработку персональных
+								данных</span></label>
+					</div>
+				</div>
+				<div class="form__item">
+					<button type="submit" class="form__button button">Отправить</button>
 				</div>
 			</form>
 		</div>
