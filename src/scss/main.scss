@@ -529,10 +529,22 @@
     top: -5.3%;
     right: 6.9%;
 
+
     z-index: -2;
+    transition: transform 5s ease 0s;
 
     img {
       @include adaptiveValue("width", 259, 126);
+    }
+
+
+    @media (min-width:$mobileSmall) {
+      transform: translate(-200px, -200px) scale(.5);
+
+      &._watcher-view {
+        transform: translate(0px, 0px) scale(1);
+      }
+
     }
 
     @media (max-width:$mobileSmall) {

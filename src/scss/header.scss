@@ -26,7 +26,6 @@
 
     img {
       @include adaptiveValue("width", 185, 156);
-      // @include adaptiveValue("height", 46, 39);
     }
   }
 

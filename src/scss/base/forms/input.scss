@@ -16,12 +16,17 @@ textarea {
 
 	width: rem(374);
 	height: rem(57);
+	padding-right: rem(10);
 
 	font-weight: 400;
 	color: $menuItemColor;
 	color: #000;
 	letter-spacing: .04em;
 	line-height: math.div(24, 16);
+
+	@media (min-width:$mobile) {
+		padding-right: rem(30);
+	}
 
 
 
